@@ -39,8 +39,8 @@ const App = () => {
     } else if (user.password.length < 6) {
       Seterrormsg("Password must contain atleast 6 letters");
     } else {
-      Setopen(true);
-      Setwlcmsg(`Hello ${user.name}`);
+      // Setopen(true);
+      Seterrormsg(`Hello ${user.name}`);
     }
   };
 
@@ -87,7 +87,7 @@ const App = () => {
       <br />
       Phone Number :{" "}
       <input
-        type="number"
+        type="text"
         name="number"
         data-testid="phoneNumber"
         value={user.phoneNumber}
@@ -116,7 +116,7 @@ const App = () => {
         {" "}
         Submit
       </button>
-      <p> {open ? wlcmsg : errormsg} </p>
+      <p>{errormsg} </p>
     </div>
   );
 };
