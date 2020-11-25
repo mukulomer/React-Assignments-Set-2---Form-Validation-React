@@ -34,7 +34,7 @@ const App = () => {
       user.gender != "others"
     ) {
       Seterrormsg("Please identify as male, female or others");
-    } else if (!user.phoneNumber.match(/[0-9]*$/)) {
+    } else if (!user.phoneNumber.match(/^[0-9]*$/)) {
       Seterrormsg("Phone Number must contain only numbers");
     } else if (user.password.length < 6) {
       Seterrormsg("Password must contain atleast 6 letters");
